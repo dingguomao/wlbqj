@@ -1,4 +1,4 @@
-package com.dbUtil;
+!package com.dbUtil;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -17,16 +17,16 @@ import com.mysql.jdbc.PreparedStatement;
 
 public class dbUtil {
 
-	String URL ="jdbc:mysql://116.62.232.244:3306/xxq?characterEncoding=utf8";
-	String USER ="xxq";
-	String PWD = "scz000614";
+	String URL ="jdbc:mysql://ipåœ°å€:3306/xxq?characterEncoding=utf8";
+	String USER ="ç”¨æˆ·å";
+	String PWD = "å¯†ç ";
 	Connection connection = null;
 	PreparedStatement pstmt = null;
 	ResultSet res = null;
 	student student = null;
 	List<student> students =  new ArrayList<>();
 	
-	//»ñÈ¡connection¶ÔÏó
+	//è·å–connectionå¯¹è±¡
 	public Connection getConnection () throws ClassNotFoundException, SQLException {
 		
 		Class.forName("com.mysql.jdbc.Driver");
@@ -36,7 +36,7 @@ public class dbUtil {
 		return connection;
 		
 	}
-	//»ñµÃpreparestatement¶ÔÏó
+	//è·å¾—preparestatementå¯¹è±¡
 	public PreparedStatement getPreparedStatement(String sql) throws ClassNotFoundException, SQLException {
 		
 		Connection connection = getConnection();
@@ -45,7 +45,7 @@ public class dbUtil {
 		return pstmt;
 	}
 	
-	//Í¨ÓÃµÄ²é
+	//é€šç”¨çš„æŸ¥
 	public ResultSet query(String sql,Object[] obj) {
 
 		
@@ -72,7 +72,7 @@ public class dbUtil {
 		
 	}
 
-	//Í¨¹ıÑ§ºÅ²éÑ¯Ñ§ÉúĞÅÏ¢
+	//é€šè¿‡å­¦å·æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯
 	
 	public student queryStudentBySno(String sql,Object[] obj) {
 		
@@ -103,7 +103,7 @@ public class dbUtil {
 	}
 	
 	
-	//²éÑ¯È«²¿Ñ§Éú
+	//æŸ¥è¯¢å…¨éƒ¨å­¦ç”Ÿ
 	public List<student> queryAll(String sql,Object[] obj) {
 		 res = query(sql, obj);
 		 try {
@@ -138,7 +138,7 @@ public class dbUtil {
 		
 	}
 	
-	//Í¨ÓÃµÄÔöÉ¾¸Ä
+	//é€šç”¨çš„å¢åˆ æ”¹
 	public boolean Upload(String sql,Object[] obj) {
 		
 		try {
@@ -177,7 +177,7 @@ public class dbUtil {
 	}
 	
 	
-	//¹Ø±ÕÁ÷
+	//å…³é—­æµ
 	public void shutdown(PreparedStatement pstmt, Connection connection,ResultSet res) throws SQLException {
 		
 		if (pstmt!=null) {
@@ -192,7 +192,7 @@ public class dbUtil {
 		
 	
 	}
-	//²éÑ¯×ÜÊı
+	//æŸ¥è¯¢æ€»æ•°
 	public int getTotality(String sql,Object[] obj) {
 		int count = -1;
 		
@@ -221,7 +221,7 @@ public class dbUtil {
 		
 	}
 
-	//µÇÂ¼
+	//ç™»å½•
 		public boolean login(String sql,Object[] obj) {
 			res = query(sql, obj);
 			try {
